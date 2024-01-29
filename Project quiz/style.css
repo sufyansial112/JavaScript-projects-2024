@@ -55,3 +55,11 @@ body {
   border-radius: 6px;
   display: none;
 }
+
+.correct{
+  background: #9aeabc
+}
+
+.incorrect{
+  background: #ff9393;
+}

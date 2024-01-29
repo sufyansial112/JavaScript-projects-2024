@@ -56,6 +56,7 @@ function startQuiz(){
 }
 
 function showQuiz(){
+    restState();
      let currentQuestion = questions[currentQuestionIndex];
      console.log(currentQuestion);
      let questionNo = currentQuestionIndex + 1;
@@ -66,8 +67,38 @@ function showQuiz(){
         const button = document.createElement('button');
         button.classList.add('btn');
         button.innerHTML = ans.text;
-        answerButton.appendChild(button)
+        answerButton.appendChild(button);
+        
+
+        if(ans.correct){
+            button.dataset.correct = ans.correct;
+    }
+    button.addEventListener('click', selectAnswer)
+
     })
 
 }
+
+    function restState(){
+        nextButton.style.display = 'none'
+        while(answerButton.firstChild){
+            answerButton.removeChild(answerButton.firstChild)
+        }
+    }
+
+
+    function selectAnswer(e){
+
+        const selectedBtn = e.target;
+
+        const isCorrect = selectedBtn.dataset.correct === 'true';
+         if(isCorrect){
+            selectedBtn.classList.add('correct');
+         }else{
+            selectedBtn.classList.add('incorrect');
+         }
+        
+    }
+
+
 startQuiz();
