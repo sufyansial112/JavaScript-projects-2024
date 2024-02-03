@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4203a9, #90bafc);
+    padding: 10px;
+}
+.age-container{
+    width: 100%;
+    max-width: 700px;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.age-container h1{
+    font-size: 42px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.age-container h1 span{
+    color: #ffff76;
+    font-weight: 500;
+}
+.calculator{
+    width: 100%;
+    background-color: grey;
+    max-width: 350px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.calculator input{
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    border-radius:6px ;
+    flex: 1;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+.btn{
+    padding: 5px 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    background: #ffff76;
+    cursor: pointer;
+}
+.calculator input::-webkit-calendar-picker-indicator{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: auto;
+    width: auto;
+    background-position: calc(100% - 10px);
+    background-size: 30px;
+    cursor: pointer;
+    
+}
