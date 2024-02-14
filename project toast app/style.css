@@ -38,4 +38,19 @@ body{
     width: 250px;
     height: 50px;
     font-size: 20px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+.toast i{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    color: green;
+}
+.toast.bg-col i{
+    color: orange;
+}
+.toast.error i{
+    color: red;
 }

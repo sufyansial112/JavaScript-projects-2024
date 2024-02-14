@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/2eea5a6414.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
 
     <div class="buttons">
-        <button onclick="showToastsBox()">Success</button>
-        <button>Invalid</button>
-        <button>Error</button>
+        <button onclick="showToastsBox(showSuccessMsg)">Success</button>
+        <button onclick="showToastsBox(invalidMsg)">Invalid</button>
+        <button onclick="showToastsBox(errorMsg)"> Error</button>
 
     </div>    
 
@@ -20,14 +21,24 @@
     <script>
 
         const toastDiv = document.querySelector('.toast-box');
+
+        let showSuccessMsg = '<i class="fa-solid fa-circle-check"></i>  successfuly completed';
+        let invalidMsg = '<i class="fa-solid fa-exclamation"></i>  Invalid Entry';
         
-    function showToastsBox(){
+        let errorMsg = ' <i class="fa-solid fa-circle-xmark"></i>  Error, please try again';
+    function showToastsBox(msg){
 
         let toast = document.createElement('div');
-        toast.classList.add('.toast');
+        toast.classList.add('toast');
 
-        toast.innerHTML = 'success';
+        toast.innerHTML = msg;
         toastDiv.appendChild(toast);
+
+        if (msg.includes('Invalid')){
+            toast.classList.add('bg-col')
+        }if (msg.includes('Error')){
+            toast.classList.add('error')
+        }
     }
 
     </script>
