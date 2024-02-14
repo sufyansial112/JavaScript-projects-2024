@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="buttons">
+        <button onclick="showToastsBox()">Success</button>
+        <button>Invalid</button>
+        <button>Error</button>
+
+    </div>    
+
+    <div class="toast-box"></div>
+
+    <script>
+
+        const toastDiv = document.querySelector('.toast-box');
+        
+    function showToastsBox(){
+
+        let toast = document.createElement('div');
+        toast.classList.add('.toast');
+
+        toast.innerHTML = 'success';
+        toastDiv.appendChild(toast);
+    }
+
+    </script>
+</body>
+</html>
