@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+        <title>Document</title>
+</head>
+<body>
+            
+        <div class="container">
+            <h1 class="h1">00:00:00</h1>
+            <div class="buttons">
+                <img src="./images/stop.png">
+                <img onclick="startWatch()" src="./images/start.png">
+                <img src="./images/reset.png">
+            </div>
+        </div>
+
+
+<script>
+
+    let h1 = document.querySelector('.h1');
+
+    let [hours, minutes, seconds] = [0,0,0];
+
+    function stopWatch(){
+        seconds++;
+        if (seconds == 60){
+            seconds = 0;
+            minutes++;
+            if (minutes ==60){
+        minutes = 0;
+        hours++;
+            }
+        } 
+
+let h = hours < 10 ? '0' + hours : hours;
+let m = minutes < 10 ? '0' + minutes : minutes;
+let s = seconds < 10 ? '0' + seconds : seconds;
+
+
+
+        h1.innerHTML = h + ":" + m + ":" + s; 
+    }
+
+
+function startWatch(){
+    setInterval(stopWatch,1000);
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>
