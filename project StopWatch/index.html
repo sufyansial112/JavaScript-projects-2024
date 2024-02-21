@@ -11,9 +11,9 @@
         <div class="container">
             <h1 class="h1">00:00:00</h1>
             <div class="buttons">
-                <img src="./images/stop.png">
+                <img onclick="stoppingWatch()" src="./images/stop.png">
                 <img onclick="startWatch()" src="./images/start.png">
-                <img src="./images/reset.png">
+                <img onclick="resetWatch()" src="./images/reset.png">
             </div>
         </div>
 
@@ -21,7 +21,7 @@
 <script>
 
     let h1 = document.querySelector('.h1');
-
+    let timer = null;
     let [hours, minutes, seconds] = [0,0,0];
 
     function stopWatch(){
@@ -46,11 +46,27 @@ let s = seconds < 10 ? '0' + seconds : seconds;
 
 
 function startWatch(){
-    setInterval(stopWatch,1000);
+
+    if (timer !== null){
+        clearInterval(timer);
+
+    }
+
+    timer = setInterval(stopWatch,1000);
 }
 
 
+function stoppingWatch(){
+    clearInterval(timer);
+}
 
+function resetWatch(){
+
+clearInterval(timer);
+[hours, minutes, seconds] = [0,0,0];
+h1.innerHTML = '00:00:00';
+
+}
 
 </script>
 
