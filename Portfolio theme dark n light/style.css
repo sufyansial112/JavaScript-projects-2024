@@ -5,10 +5,19 @@
     font-family: 'poppins', sans-serif;
 }
 
+:root{
+     --primary-color: #edf2fc;
+    --secondary-color: #212121;
+} 
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+
 .Hero-bg{
     width: 100%;
     height: 100vh;
-    background: #edf2fc;
+    background: var(--primary-color);
     position: relative;
 }
 nav{
@@ -18,18 +27,30 @@ nav{
     margin-right: 20px;
     align-items: center;
 }
+.navimg{
+    color: #ff4321;
+}
+
 ul {
     text-decoration: none;
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul:nth-of-type(:last-child){
+    margin-left: 20px;
 }
 ul li{
     font-size: 18px;
 }
 ul li a{
-    color: #606163;
+    color: var(--secondary-color);
     margin-right: 20px;
-
+    cursor: pointer;
+}
+ul li a:hover{
+    color: #ff4321;
 }
 .hero-main{
     margin-top: 12%;
@@ -39,6 +60,7 @@ ul li a{
     font-size: 42px;
     font-weight: 600;
     margin-bottom: 20px;
+    color: var(--secondary-color);
 }
 .hero-main span{
     color: #ff4321;
@@ -47,6 +69,7 @@ ul li a{
     font-size: 18px;
     margin-bottom: 20px;
     line-height: 1.5;
+    color: var(--secondary-color);
 }
 .hero-main a{
     text-decoration: none;
@@ -54,28 +77,49 @@ ul li a{
     background: #606163;
     padding: 10px;
     cursor: pointer;
+
 }
 .hero-main a:hover{
     text-decoration: underline;
 }
-.imggirl{
-    position: absolute;
-    width: 30%;
-    right: 20%;
-    top: 20%;
-    transform: translateX(50%);
-    overflow: hidden;
-    bottom: -20%;
-}
-.imgpattern{
-    width: 40%;
-    position: absolute;
-    right: 20%;
-    top: 20%;
-    transform: translate(50%);
-    overflow: hidden;
-    bottom: -20%;
-}
+
 .hero-img{
-    overflow: hidden;
+position: absolute;
+width: 45%;
+height: 80%;
+bottom: 0;
+right: 50px;
+
+}
+.hero-img img{
+    position: absolute;
+    height: 100%;
+    left: 20%;
+    bottom: 0;
+    transition: bottom 1s, left 1s;
+}
+.hero-img:hover .imgpattern{
+    bottom: 40px;
+}
+.hero-img:hover .imggirl{
+    left: 30%;
+}
+.social-links{
+    margin-left: 7%;
+    margin-top:200px;
+}
+.social-links a{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    margin-right: 20px;
+    color: gray;
+}
+.social-links a:hover{
+    color: #ff4321;
+}
+#moon{
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
 }
