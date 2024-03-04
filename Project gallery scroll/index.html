@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex-wrap">
+        <span><img src="./images/back.png" id="backbtn"></span>
+        <div class="gallery">
+            <div>
+                <span><img src="./images/image-1.png"></span>
+                <span><img src="./images/image-2.png"></span>
+                <span><img src="./images/image-3.png"></span>
+            </div>
+            <div class="img4">
+                <span><img class="" src="./images/image-4.png"></span>
+                <span><img src="./images/image-5.png"></span>
+                <span><img src="./images/image-6.png"></span>
+            </div>
+            </div>
+            <span><img src="./images/next.png" id="nextbtn"></span>
+        </div>
+
+   <script>
+
+    let scrollBar = document.querySelector('.gallery');
+    let nextBtn = document.getElementById('nextbtn');
+    let backBtn = document.getElementById('backbtn');
+
+
+    scrollBar.addEventListener('wheel', function(e){
+        e.preventDefault();
+        scrollBar.scrollLeft += evt.deltaY;
+    })
+
+    nextBtn.addEventListener('click', function(){
+        scrollBar.style.scrollBehavior = 'smooth';
+        scrollBar.scrollLeft += 900;
+
+    })
+
+    backBtn.addEventListener('click', function(){
+        scrollBar.style.scrollBehavior = 'smooth';
+        scrollBar.scrollLeft -= 900;
+
+    })
+
+   </script>
+
+     
+
+</body>
+</html>
