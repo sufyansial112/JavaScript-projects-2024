@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="container">
+    <div class="input-box" id="input">
+        <input type="password" placeholder="enter password" required id="password">
+        <button id="btn"><img class="eye" src="./eye-close.png"><img  src="./arrow.png" class="img"></button>
+    <p id="passtext">The Password is <span id="strength"></span></p>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let showpass = document.querySelector('.eye');
+let passowrd = document.getElementById('password');
+const button = document.getElementById('btn');
+let passtext = document.getElementById('passtext');
+let strength = document.getElementById('strength');
+    
+    passowrd.addEventListener('input', function(){
+
+        if(passowrd.value.length > 0){
+            passtext.style.display = 'block';
+        }else{
+            passtext.style.display = 'none';
+
+        } if (passowrd.value.length < 4 ){
+            strength.innerHTML = 'weak';
+            passowrd.style.borderColor = 'red';
+            strength.style.color = 'red';
+        } else if (passowrd.value.length >4 && passowrd.value.length < 8){
+            strength.innerHTML = 'medium';
+            strength.style.color = 'yellow'
+            passowrd.style.borderColor  = 'yellow';
+        }else if (passowrd.value.length > 8){
+            strength.innerHTML = 'strong';
+            strength.style.color = 'blue';
+            passowrd.style.borderColor = 'blue';
+        }
+        
+    })
+
+
+        showpass.addEventListener('click', function(){
+
+            if (passowrd.type == 'password'){
+
+                passowrd.type = 'text';
+                showpass.src = './eye-open.png';
+
+            }else{
+                passowrd.type = 'password';
+                showpass.src = './eye-close.png';
+            }
+
+
+        })
+
+</script>
+
+</body>
+</html>
