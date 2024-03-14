@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="hero">
+<h1>Text to speech <span>converter</span></h1>
+    <textarea placeholder="write text to convert to speech"></textarea>
+    <div class="row">
+        <select></select>
+        <button><img src="./play.png">Listen</button>
+    </div>
+</div>
+
+
+
+<script>
+
+let speech = new SpeechSynthsesisUtterance();
+
+    document.querySelector('button').addEventListener('click', function(){
+
+        speech.text = document.querySelector('textarea').value;
+
+        window.speechSynthesis.speak(speech);
+
+    });
+
+</script>
+</body>
+</html>
