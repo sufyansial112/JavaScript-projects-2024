@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(background.png);
+    background-position: center;
+    background-size: cover;
+}
+.text{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+.text p{
+    color: #ddd;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.text h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.text span{
+    color: tomato;
+}
+.text button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    border: 2px solid gray;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #ddd;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.text img{
+    width: 20px;
+}
+
+.launch{
+    display: flex;
+    margin-bottom: 20px;
+}
+.watch{
+    flex-basis: 100px;
+}
+.watch h3{
+    font-size: 20px;
+    color: #ddd;
+}
