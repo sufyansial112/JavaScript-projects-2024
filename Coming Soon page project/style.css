@@ -21,7 +21,7 @@
     color: #ddd;
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .text h1{
     font-size: 40px;
@@ -54,12 +54,35 @@
 
 .launch{
     display: flex;
-    margin-bottom: 20px;
+    margin: 40px 0;
+    
 }
 .watch{
     flex-basis: 100px;
 }
+.watch p{
+    font-size: 40px;
+}
 .watch h3{
     font-size: 20px;
     color: #ddd;
+}
+.bg-img{
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 250px;
+    animation:  rocket 4s linear infinite ;
+}
+
+@keyframes rocket{
+
+    0%{
+        opacity: 0;
+        bottom: 0;
+    }    
+    100%{
+        opacity: 1;
+        bottom: 110%;
+    }
 }

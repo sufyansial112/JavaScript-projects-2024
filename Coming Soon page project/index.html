@@ -14,26 +14,53 @@
             <h1>We're <span>Launching </span>Soon</h1>
             <div class="launch">
                 <div class="watch">
-                    <p>00</p>
+                    <p id="days">00</p>
                     <h3>Days</h2>
                 </div>
                 <div class="watch">
-                    <p>00</p>
+                    <p id="hours">00</p>
                     <h3>Hours</h2>
                 </div>
                 <div class="watch">
-                    <p>00</p>
+                    <p id="minutes">00</p>
                     <h3>Minutes</h2>
                 </div>
                 <div class="watch">
-                    <p>00</p>
+                    <p id="seconds">00</p>
                     <h3>Seconds</h2>
                 </div>
             </div>
             <button>Learn More<img src="./triangle.png"></button>
         </div>
+        <img src="./rocket.png" class="bg-img">
     </div>
 
     
+
+    <script>
+
+        var countDownDate = new Date('March 18, 2024 00:00:00').getTime();
+
+        var x = setTimeout(function(){
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerHTML = days;
+        document.getElementById('days').innerHTML = hours;
+        document.getElementById('days').innerHTML = minutes;
+        document.getElementById('days').innerHTML = seconds;
+
+        }, 1000)
+
+       
+    
+    </script>
 </body>
 </html>
