@@ -8,23 +8,66 @@
 </head>
 <body>
     <div class="container">
-        <div class="selector">
-            <p>Select Social Media</p>
+        <div class="selectField">
+            <p id="selectText"> Select Social Media</p>
             <img src="./arrow.png" class="arrow">
         </div>
 
-        <ul>
-            <li><img src="./facebook.png">Facebook</li>
-            <li><img src="./facebook.png">Facebook</li>
-            <li><img src="./facebook.png">Facebook</li>
-            <li><img src="./facebook.png">Facebook</li>
-            <li><img src="./facebook.png">Facebook</li>
-            <li><img src="./facebook.png">Facebook</li>
-            <li><img src="./facebook.png">Facebook</li>
+        <ul class="hide" id="list">
+            <li class="options">
+                <img src="./facebook.png">
+                <p>Facebook</p>
+            </li>
+            <li class="options">
+                <img src="./instagram.png">
+                <p>Instagram</p>
+            </li>
+            <li class="options">
+                <img src="./pinterest.png">
+                <p>Pinterest</p>
+            </li>
+            <li class="options">
+                <img src="./twitter.png">
+                <p>Twitter</p>
+            </li>
+            <li class="options">
+                <img src="./whatsapp.png">
+                <p>Whatsapp</p>
+            </li>
+            
         </ul>
 
 
     </div>
+
+
+    <script>
+
+let selectField = document.querySelector('.selectField');
+let selectText = document.getElementById('selectText');
+let hide = document.querySelector('hide');
+let list = document.getElementById('list');
+
+        
+        selectField.addEventListener('click', function(){
+
+            list.classList.toggle('hide');
+
+        })
+
+
+        let options = document.getElementsByClassName('options');
+        
+        for(option of options){
+
+            option.onclick = function(){
+                selectText.innerHTML = this.textContent;
+            list.classList.toggle('hide');
+
+            }
+        }
+
+    </script>
 
 </body>
 </html>
