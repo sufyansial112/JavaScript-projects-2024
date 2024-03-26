@@ -22,6 +22,7 @@
     flex-basis: 47%;
     background-color: #000;
     transform: scale(1.08);
+    position: relative;
 }
 .gallery img{
     width: 100%;
@@ -31,6 +32,7 @@
     flex-basis: 53%;
     background-color: #fff;
     padding: 40px;
+    padding-left: 60px;
 }
 .details h2{
     color: #000;
@@ -50,7 +52,7 @@
 }
 .details p{
     color: #555;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .select-size{
     display: flex;
@@ -59,6 +61,8 @@
 }
 .select-size span{
     color: #000;
+    cursor: pointer;
+
 }
 .select-size h4{
     margin-right: 30px;
@@ -92,23 +96,85 @@
 }
 .color1{
     background-color: red;
+    cursor: pointer;
 }
 .color2{
     background-color: blue;
+    cursor: pointer;
+
 }
 .color3{
     background-color: black;
+    cursor: pointer;
+
 }
 .color4{
     background-color: wheat;
+    cursor: pointer;
+
 }
 .color5{
     background-color: brown;
+    cursor: pointer;
+
 }
 .color input{
     display: none;
+    cursor: pointer;
+
 }
 .color input:checked + span{
     transform: scale(1.5);
     border-radius: 10px solid green;
 }
+.quantity{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+}
+.quantity p{
+    color: #555;
+    font-weight: 600;
+
+}
+.quantity input{
+    width: 50px;
+    margin-left: 10px;
+    outline: none;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 50px;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.controls{
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+.btn{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d0eaff;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.active{
+    background-color: blue;
+}
+
